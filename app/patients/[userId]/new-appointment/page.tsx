@@ -7,6 +7,7 @@ import * as Sentry from "@sentry/nextjs";
 
 const NewAppointment = async ({ params: { userId } }: SearchParamProps) => {
   const patient = await getPatient(userId);
+
   Sentry.metrics.set("user_view_new-appointment", patient.name);
 
   return (
@@ -27,7 +28,7 @@ const NewAppointment = async ({ params: { userId } }: SearchParamProps) => {
             type="create"
           />
 
-          <p className="copyright mt-10 py-12">© 2024 CarePluse</p>
+          <p className="copyright mt-10 py-12">© 2024 Helio</p>
         </div>
       </section>
 

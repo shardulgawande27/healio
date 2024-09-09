@@ -11,10 +11,17 @@ export default function Home({ searchParams }: SearchParamProps) {
     <div className="flex h-screen max-h-screen">
       {isAdmin && <PasskeyModal />}
 
+      <Image
+        src="/assets/images/onboarding-img1.jpg"
+        alt="Image 1"
+        height={1000}
+        width={1000}
+        className="side-img max-w-[50%]"
+      />
       <section className="remove-scrollbar container my-auto">
         <div className="sub-container max-w-[496px]">
           <Image
-            src="/assets/icons/logo-full.svg"
+            src="/assets/images/helio-logo.png"
             alt="Logo"
             height={1000}
             width={1000}
@@ -23,7 +30,7 @@ export default function Home({ searchParams }: SearchParamProps) {
           <PatientForm />
           <div className="text-14-regular mt-20 flex justify-between">
             <p className="justify-items-end text-dark-600 xl:text-left">
-              © 2024 CareFul
+              © 2024 Helio
             </p>
             <Link href="/?admin=true" className="text-green-500">
               Admin
@@ -31,13 +38,6 @@ export default function Home({ searchParams }: SearchParamProps) {
           </div>
         </div>
       </section>
-      <Image
-        src="/assets/images/onboarding-img.png"
-        alt="Image 1"
-        height={1000}
-        width={1000}
-        className="side-img max-w-[50%]"
-      />
     </div>
   );
 }

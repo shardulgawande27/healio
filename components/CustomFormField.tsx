@@ -62,7 +62,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
   switch (fieldType) {
     case FormFieldType.INPUT:
       return (
-        <div className="flex rounded-md border border-dark-500 bg-dark-400">
+        <div className="flex rounded-md border border-dark-500 bg-white">
           {props.iconSrc && (
             <Image
               src={props.iconSrc}
@@ -102,7 +102,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
             withCountryCallingCode
             value={field.value as E164Number | undefined}
             onChange={field.onChange}
-            className="input-phone"
+            className="input-phone !text-dark-300 !bg-white"
           />
         </FormControl>
       );
@@ -123,7 +123,7 @@ const RenderField = ({ field, props }: { field: any; props: CustomProps }) => {
       );
     case FormFieldType.DATE_PICKER:
       return (
-        <div className="flex rounded-md border border-dark-500 bg-dark-400">
+        <div className="flex rounded-md border border-dark-500 bg-white">
           <Image
             src="/assets/icons/calendar.svg"
             height={24}
